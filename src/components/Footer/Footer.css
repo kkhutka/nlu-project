@@ -1,0 +1,15 @@
+.site-footer {
+  border-top: 1px solid #e9eef5;
+  background: #fff;
+  margin-top: 48px;
+}
+.footer-inner {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  padding: 12px clamp(12px, 2vw, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.footer-logo { height: 28px; width: auto; }

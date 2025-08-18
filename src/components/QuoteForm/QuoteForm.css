@@ -1,0 +1,64 @@
+.quote-card {
+  background: #fff;
+  border: 1px solid #e7ebf1;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+
+.quote-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.quote-card label {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.quote-card label > span {
+  font-size: 13px;
+  color: #5e6573;
+}
+
+.quote-card input,
+.quote-card select,
+.quote-card textarea {
+  padding: 10px 12px;
+  border: 1px solid #dfe4ec;
+  border-radius: 10px;
+  font: inherit;
+  outline: none;
+  background: #fff;
+}
+
+.quote-card textarea { resize: vertical; }
+
+.quote-card .check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #1f6fff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover { filter: brightness(0.96); }
+
+.success {
+  margin-top: 8px;
+  color: #0a7b2c;
+  font-weight: 600;
+}
