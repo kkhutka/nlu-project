@@ -12,4 +12,7 @@
   justify-content: space-between;
   gap: 16px;
 }
-.footer-logo { height: 28px; width: auto; }
+.footer-logo { 
+    height: 28px; 
+    width: auto; 
+}

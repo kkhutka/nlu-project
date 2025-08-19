@@ -25,7 +25,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <aside className="home-quote">
+        <aside>
           <QuoteForm />
         </aside>
       </section>

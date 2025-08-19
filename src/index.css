@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root{
-  --bg: #ffffff;
-  --surface: #ffffff;
-  --ink: #0f172a;        
-  --muted: #475569;      
-  --line: #e2e8f0;     
-  --accent: #1e66ff;
+  --bg:#fff; --surface:#fff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --accent:#1e66ff;
 
-  --maxw: 1500px;       
+  --maxw: 1400px;                
   --pad: clamp(16px, 3vw, 28px);
   --radius: 14px;
   --shadow: 0 8px 30px rgba(2,6,23,.08);
@@ -19,52 +14,54 @@
   --lh: 1.65;
 }
 
-* { box-sizing: border-box; }
-html, body, #root { height: 100%; }
+*{ box-sizing: border-box; }
+html, body, #root{ 
+  height:100vh; 
+}
+
 
 body{
-  margin: 0;
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
-  color: var(--ink);
-  background: var(--bg);
-  font-size: var(--text);
-  line-height: var(--lh);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin:0;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
+  color:var(--ink);
+  background:var(--bg);
+  font-size:var(--text);
+  line-height:var(--lh);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-
-#root { width: 100%; }
-
-.container{
-  width: min(100%, var(--maxw));
-  margin-inline: auto;
-  padding-inline: var(--pad);
+#root{ width:100%; }
+.container, .app-container{
+  width:min(100%, var(--maxw));
+  margin-inline:auto;
+  padding-inline:var(--pad);
+  flex: 1 0 auto;
 }
 
-h1 { font-size: var(--h1); line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5rem; font-weight: 800; }
-h2 { font-size: var(--h2); line-height: 1.2;  letter-spacing: -0.01em; margin: 0 0 .5rem; font-weight: 700; }
-p  { margin: 0 0 1rem; color: var(--ink); }
+h1{ font-size:var(--h1); 
+  line-height:1.15; 
+  letter-spacing:-.02em; 
+  margin:0 0 .5rem; 
+  font-weight:800; }
 
-.btn-primary{
-  display: inline-flex; align-items:center; justify-content:center;
-  padding: 10px 16px;
-  border-radius: 10px; border: 1px solid transparent;
-  background: var(--accent); color: #fff; font-weight: 600;
-  box-shadow: var(--shadow); cursor: pointer;
-}
-.btn-primary:hover{ filter: brightness(.96); }
-
-.card{
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+h2{ 
+  font-size:var(--h2);
+  line-height:1.2;
+  letter-spacing:-.01em; 
+  margin:0 0 .5rem; 
+  font-weight:700; 
 }
 
-.full-bleed{
-  position: relative;
-  width: 100vw;
-  left: 50%; right: 50%;
-  margin-left: -50vw; margin-right: -50vw;
+p { 
+  margin:0 0 1rem; 
+  color:var(--ink); 
 }
+
+.card{ 
+  background:var(--surface); 
+  border:1px solid var(--line); 
+  border-radius:var(--radius); 
+  box-shadow:var(--shadow); }
+
+

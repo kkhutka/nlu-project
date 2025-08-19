@@ -29,73 +29,79 @@ export default function QuoteForm() {
 
   if (done) {
     return (
-      <div className="quote-card">
-        <h3>Get a quote</h3>
-        <p className="success">Thanks! Your request was saved.</p>
+      <div className="quote-wrap">
+        <div className="quote-card">
+            <h3>Get a quote</h3>
+            <p className="success">Thanks! Your request was saved.</p>
+        </div>
       </div>
     );
   }
 
   return (
-    <form className="quote-card" onSubmit={onSubmit}>
-      <h3>Get a quote</h3>
+    <div className="quote-wrap">
+        <form className="quote-card" onSubmit={onSubmit}>
+        <h3>Get a quote</h3>
 
-      <label>
-        <span>Name</span>
-        <input name="name" value={form.name} onChange={onChange} required />
-      </label>
+        <label>
+            <input name="name" 
+            placeholder="Name"
+            value={form.name} 
+            onChange={onChange} 
+            required />
+        </label>
 
-      <label>
-        <span>Email</span>
-        <input
-          type="email"
-          name="email"
-          value={form.email}
-          onChange={onChange}
-          required
-        />
-      </label>
+        <label>
+            <input
+            placeholder="Email"
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={onChange}
+            required
+            />
+        </label>
 
-      <label>
-        <span>Capability</span>
-        <select
-          name="capability"
-          value={form.capability}
-          onChange={onChange}
-          required
-        >
-          <option value="" disabled>
-            Select a capability
-          </option>
-          {CAPABILITIES.map((c) => (
-            <option key={c} value={c}>
-              {c}
+        <label>
+            <select
+            name="capability"
+            value={form.capability}
+            onChange={onChange}
+            required
+            >
+            <option value="" disabled>
+                Select a capability
             </option>
-          ))}
-        </select>
-      </label>
+            {CAPABILITIES.map((c) => (
+                <option key={c} value={c}>
+                {c}
+                </option>
+            ))}
+            </select>
+        </label>
 
-      <label>
-        <span>Comments</span>
-        <textarea
-          rows={5}
-          name="comments"
-          value={form.comments}
-          onChange={onChange}
-        />
-      </label>
+        <label>
+            <textarea
+            placeholder="Comments"
+            rows={5}
+            name="comments"
+            value={form.comments}
+            onChange={onChange}
+            />
+        </label>
 
-      <label className="check">
-        <input
-          type="checkbox"
-          name="subscribe"
-          checked={form.subscribe}
-          onChange={onChange}
-        />
-        <em>I’d like to receive the newsletter</em>
-      </label>
+        <label className="check">
+            <input
+            type="checkbox"
+            name="subscribe"
+            checked={form.subscribe}
+            onChange={onChange}
+            />
+            <em>I’d like to receive the newsletter</em>
+        </label>
 
-      <button type="submit" className="btn-primary">Get a quote</button>
-    </form>
+        <button type="submit" className="btn-primary">Get a quote</button>
+        </form>
+    </div>
   );
 }
